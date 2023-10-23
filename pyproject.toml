@@ -1,0 +1,175 @@
+# Build system requirements.
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+# Project metadata.
+[project]
+name = "dict2dict"
+version = "0.1.0"
+description = "Opinionated dictionary utilities for Python."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+  { name = "lykmapipo", email = "lallyelias87@gmail.com" },
+]
+maintainers = [
+  { name = "lykmapipo", email = "lallyelias87@gmail.com" },
+]
+keywords = [
+  "lykmapipo",
+  "dictionary",
+  "dict",
+  "utilities",
+  "utils",
+  "helpers",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Utilities",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "black",
+  "build",
+  "coverage[toml]",
+  "isort",
+  "mypy",
+  "pre-commit",
+  "pytest",
+  "pytest-cov",
+  "pydocstyle",
+  "ruff",
+  "setuptools",
+  "twine",
+]
+
+[project.urls]
+Homepage = "https://github.com/lykmapipo/dict2dict"
+Documentation = "https://github.com/lykmapipo/dict2dict"
+Changelog = "https://github.com/lykmapipo/dict2dict/blob/main/CHANGELOG.md"
+Repository = "https://github.com/lykmapipo/dict2dict"
+Issues = "https://github.com/lykmapipo/dict2dict/issues"
+
+[tool.ruff]
+fix = true
+line-length = 88
+src = ["src", "tests"]
+target-version = "py38"
+unfixable = []
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "RUF",  # Ruff-specific rules
+    "ANN",  # flake8-annotations
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+    "I",  # isort
+    "D",  # pydocstyle
+]
+ignore = [
+  "E501",  # line too long, handled by black
+  "C901",  # too complex
+]
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.ruff.isort]
+lines-after-imports = 2
+lines-between-types = 1
+known-first-party = ["dict2dict", "tests"]
+
+[tool.ruff.pydocstyle]
+convention = "numpy"
+
+[tool.black]
+target-version = ["py38"]
+line-length = 88
+ensure-newline-before-comments = true
+lines-after-imports = 2
+
+[tool.isort]
+profile = "black"
+line_length = 88
+known_first_party = ["dict2dict"]
+lines_after_imports = 2
+lines_between_sections = 1
+lines_between_types = 1
+ensure_newline_before_comments = true
+force_sort_within_sections = true
+src_paths = ["src", "tests"]
+
+[tool.pydocstyle]
+convention = "numpy"
+
+[tool.mypy]
+strict = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["src", "tests"]
+branch = true
+parallel = true
+context = "${CONTEXT}"
+
+[tool.coverage.report]
+precision = 2
+skip_empty = true
+ignore_errors = false
+show_missing = true
+exclude_lines = [
+  # Have to re-enable the standard pragma
+  "pragma: no cover",
+
+  # Don't complain about missing debug-only code:s
+  "def __repr__",
+  "if self.debug",
+
+  # Don't complain if tests don't hit defensive assertion code:
+  "raise AssertionError",
+  "raise NotImplementedError",
+  "AbstractMethodError",
+
+  # Don't complain if non-runnable code isn't run:
+  "if 0:",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
+
+
+# Build system metadata.
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["dict2dict", "dict2dict.*"]
+exclude = ["tests*"]
+namespaces = false
