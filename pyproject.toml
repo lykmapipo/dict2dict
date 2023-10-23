@@ -165,6 +165,17 @@ exclude_lines = [
   "if TYPE_CHECKING:",
 ]
 
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.0.0"
+version_provider = "commitizen"
+version_scheme = "semver"
+major_version_zero = true
+tag_format = "v$version"
+update_changelog_on_bump = true
+changelog_file = "CHANGELOG.md"
+bump_message = "chore(release): bump $current_version to $new_version"
+
 
 # Build system metadata.
 [tool.setuptools]
