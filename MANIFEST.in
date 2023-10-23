@@ -1,6 +1,6 @@
 include CHANGELOG.md
 include CODE_OF_CONDUCT.md
-include CONTRIBUTION.md
+include CONTRIBUTING.md
 include DOCUMENTATION.md
 include LICENSE
 include README.md
