@@ -55,6 +55,7 @@ dependencies = []
 dev = [
   "black",
   "build",
+  "commitizen",
   "coverage[toml]",
   "isort",
   "mypy",
