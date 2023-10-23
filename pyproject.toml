@@ -25,6 +25,7 @@ keywords = [
   "utilities",
   "utils",
   "helpers",
+  "merge",
 ]
 classifiers = [
   "Development Status :: 3 - Alpha",
