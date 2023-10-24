@@ -1,4 +1,4 @@
-"""Utilities to merge multiple ``dict`` into single ``dict``."""
+"""Utilities to merge multiple ``dict's`` into single ``dict``."""
 from typing import Any, Dict
 
 
@@ -39,17 +39,17 @@ def dicts2dict(*dicts: Dict[str, Any]) -> Dict[str, Any]:
     for obj in dicts:
         # limit dict only when merging
         if obj and isinstance(obj, dict):
-            # collect each dict falsey and truey items
+            # collect each dict falsey and truey values
             for k, v in obj.items():
-                # collect truey valye
+                # collect dict truey value
                 if v:
                     truey[k] = v
-                # collect falsey value
+                # collect dict falsey value
                 else:
                     falsey[k] = v
 
-    # merge falsey and truey values from sources dict
+    # merge falsey and truey values from source dicts
     result = {**falsey, **truey}
 
-    # return merged values
+    # return merged dict values
     return result
