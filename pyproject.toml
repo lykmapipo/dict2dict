@@ -26,6 +26,8 @@ keywords = [
   "utils",
   "helpers",
   "merge",
+  "omit",
+  "remove",
 ]
 classifiers = [
   "Development Status :: 3 - Alpha",

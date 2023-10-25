@@ -15,6 +15,17 @@ pip install -U dict2dict
 
 ## Usage
 
+- Omit/Remove falsey items from a dictionary
+```python
+from dict2dict import omit_falsey
+
+a = { "a": 1, "b": None, }
+b = omit_falsey(a)
+
+b == { "a": 1, }
+True
+```
+
 - Merge multiple dictionaries into one dictionary
 ```python
 from dict2dict import dicts2dict
