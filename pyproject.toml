@@ -53,19 +53,19 @@ dependencies = []
 
 [project.optional-dependencies]
 dev = [
-  "black",
-  "build",
-  "commitizen",
-  "coverage[toml]",
-  "isort",
-  "mypy",
-  "pre-commit",
-  "pytest",
-  "pytest-cov",
-  "pydocstyle",
-  "ruff",
-  "setuptools",
-  "twine",
+  "black>=23.10.0",
+  "build>=1.0.3",
+  "commitizen>=3.12.0",
+  "coverage[toml]>=7.3.2",
+  "isort>=5.12.0",
+  "mypy>=1.6.1",
+  "pre-commit>=3.5.0",
+  "pytest>=7.4.2",
+  "pytest-cov>=4.1.0",
+  "pydocstyle>=6.3.0",
+  "ruff>=0.1.0",
+  "setuptools>=68.2.2",
+  "twine>=4.0.2",
 ]
 
 [project.urls]
