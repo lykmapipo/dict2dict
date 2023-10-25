@@ -15,8 +15,8 @@ True
 >>> a = { "a": 1, "b": None, "c": None, }
 >>> b = { "b": 2, "c": None, }
 >>> c = dicts2dict(a, b)
->>> print(c)
-{ "a": 1, "b": 2, "c": None, }
+>>> c == { "a": 1, "b": 2, "c": None, }
+True
 """
 from .clean import omit_falsey
 from .merge import dicts2dict

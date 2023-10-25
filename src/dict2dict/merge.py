@@ -28,8 +28,8 @@ def dicts2dict(*dicts: Dict[str, Any]) -> Dict[str, Any]:
     >>> a = { "a": 1, "b": None, "c": None, }
     >>> b = { "b": 2, "c": None, }
     >>> c = dicts2dict(a, b)
-    >>> print(c)
-    { "a": 1, "b": 2, "c": None, }
+    >>> c == { "a": 1, "b": 2, "c": None, }
+    True
     """
     falsey: Dict[str, Any] = {}  # falsey values
     truey: Dict[str, Any] = {}  # truey values
