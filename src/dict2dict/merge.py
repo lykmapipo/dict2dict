@@ -2,10 +2,10 @@
 from typing import Any, Dict
 
 
-__all__ = ["dicts2dict"]
+__all__ = ["dicts_to_dict"]
 
 
-def dicts2dict(*sources: Dict[str, Any]) -> Dict[str, Any]:
+def dicts_to_dict(*sources: Dict[str, Any]) -> Dict[str, Any]:
     """Merge multiple ``dict`` into single ``dict``.
 
     It takes any number of ``dict``, merge them into a ``new dict``,
@@ -24,10 +24,10 @@ def dicts2dict(*sources: Dict[str, Any]) -> Dict[str, Any]:
 
     Examples
     --------
-    >>> from dict2dict import dicts2dict
+    >>> from dict2dict import dicts_to_dict
     >>> a = { "a": 1, "b": None, "c": None, }
     >>> b = { "b": 2, "c": None, }
-    >>> c = dicts2dict(a, b)
+    >>> c = dicts_to_dict(a, b)
     >>> c == { "a": 1, "b": 2, "c": None, }
     True
     """

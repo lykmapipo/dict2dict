@@ -17,11 +17,11 @@ pip install -U dict2dict
 
 - Merge multiple dictionaries into one dictionary
 ```python
-from dict2dict import dicts2dict
+from dict2dict import dicts_to_dict
 
 a = {"a": 1, "b": None, "c": None, }
 b = {"b": 2, "c": None, }
-c = dicts2dict(a, b)
+c = dicts_to_dict(a, b)
 
 c == {"a": 1, "b": 2, "c": None, }
 # True

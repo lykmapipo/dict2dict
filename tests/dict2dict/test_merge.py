@@ -3,7 +3,7 @@ from typing import Any, Dict, List, Tuple
 
 import pytest
 
-from dict2dict import dicts2dict
+from dict2dict import dicts_to_dict
 
 
 @pytest.mark.parametrize(
@@ -20,11 +20,11 @@ from dict2dict import dicts2dict
         ),
     ],
 )
-def test_dicts2dict(sources: Tuple[List[Dict[str, Any]], Dict[str, Any]]) -> None:
+def test_dicts_to_dict(sources: Tuple[List[Dict[str, Any]], Dict[str, Any]]) -> None:
     """Test merging dicts to dict."""
     raw_dicts, expected_dict = sources
 
-    result_dict = dicts2dict(*raw_dicts)
+    result_dict = dicts_to_dict(*raw_dicts)
     assert result_dict is not None
     assert isinstance(result_dict, dict)
 

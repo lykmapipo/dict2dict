@@ -19,16 +19,16 @@ True
 
 
 - Merging multiple dictionaries to single dictionary
->>> from dict2dict import dicts2dict
+>>> from dict2dict import dicts_to_dict
 >>> a = { "a": 1, "b": None, "c": None, }
 >>> b = { "b": 2, "c": None, }
->>> c = dicts2dict(a, b)
+>>> c = dicts_to_dict(a, b)
 >>> c == { "a": 1, "b": 2, "c": None, }
 True
 """
 from .clean import omit_falsey
-from .merge import dicts2dict
+from .merge import dicts_to_dict
 from .transform import falsey_to_none
 
 
-__all__ = ["omit_falsey", "dicts2dict", "falsey_to_none"]
+__all__ = ["omit_falsey", "dicts_to_dict", "falsey_to_none"]
