@@ -5,7 +5,7 @@ from typing import Any, Dict
 __all__ = ["dicts2dict"]
 
 
-def dicts2dict(*dicts: Dict[str, Any]) -> Dict[str, Any]:
+def dicts2dict(*sources: Dict[str, Any]) -> Dict[str, Any]:
     """Merge multiple ``dict`` into single ``dict``.
 
     It takes any number of ``dict``, merge them into a ``new dict``,
@@ -14,7 +14,7 @@ def dicts2dict(*dicts: Dict[str, Any]) -> Dict[str, Any]:
 
     Parameters
     ----------
-    dicts (*dict):
+    sources (*dict):
         Variable ``dict's``.
 
     Returns
@@ -36,11 +36,11 @@ def dicts2dict(*dicts: Dict[str, Any]) -> Dict[str, Any]:
     result: Dict[str, Any] = {}  # merged values
 
     # collect truey and falsey values from source dicts
-    for obj in dicts:
+    for source in sources:
         # limit dict only when merging
-        if obj and isinstance(obj, dict):
+        if source and isinstance(source, dict):
             # collect each dict falsey and truey values
-            for k, v in obj.items():
+            for k, v in source.items():
                 # collect dict truey value
                 if v:
                     truey[k] = v
