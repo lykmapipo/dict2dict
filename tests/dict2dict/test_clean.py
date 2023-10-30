@@ -18,12 +18,14 @@ from dict2dict import omit_falsey
         ({"a": 1, "b": 0j}, {"a": 1}),  # handled
         ({"a": 1, "b": ""}, {"a": 1}),  # handled
         ({"a": 1, "b": " "}, {"a": 1, "b": " "}),  # ignored
+        ({"a": 1, "b": ()}, {"a": 1}),  # handled
+        ({"a": 1, "b": (None)}, {"a": 1}),  # handled
+        ({"a": 1, "b": ("c", None)}, {"a": 1, "b": ("c", None)}),  # ignored
         ({"a": 1, "b": []}, {"a": 1}),  # handled
         ({"a": 1, "b": [None]}, {"a": 1, "b": [None]}),  # ignored
         ({"a": 1, "b": {}}, {"a": 1}),  # handled
+        ({"a": 1, "b": {None}}, {"a": 1, "b": {None}}),  # ignored
         ({"a": 1, "b": {"c": None}}, {"a": 1, "b": {"c": None}}),  # ignored
-        ({"a": 1, "b": ()}, {"a": 1}),  # handled
-        ({"a": 1, "b": ("c", None)}, {"a": 1, "b": ("c", None)}),  # ignored
         (
             {"a": 1, "b": "b", "c": 2.0, "d": True, "e": 1j},
             {"a": 1, "b": "b", "c": 2.0, "d": True, "e": 1j},

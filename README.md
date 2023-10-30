@@ -15,6 +15,18 @@ pip install -U dict2dict
 
 ## Usage
 
+- Merge multiple dictionaries into one dictionary
+```python
+from dict2dict import dicts2dict
+
+a = {"a": 1, "b": None, "c": None, }
+b = {"b": 2, "c": None, }
+c = dicts2dict(a, b)
+
+c == {"a": 1, "b": 2, "c": None, }
+# True
+```
+
 - Omit/Remove falsey items from a dictionary
 ```python
 from dict2dict import omit_falsey
@@ -26,15 +38,14 @@ b == { "a": 1, }
 # True
 ```
 
-- Merge multiple dictionaries into one dictionary
+- Normalize falsey items from a dictionary to ``None``
 ```python
-from dict2dict import dicts2dict
+from dict2dict import falsey_to_none
 
-a = {"a": 1, "b": None, "c": None, }
-b = {"b": 2, "c": None, }
-c = dicts2dict(a, b)
+a = { "a": 1, "b": [], }
+b = falsey_to_none(a)
 
-c == {"a": 1, "b": 2, "c": None, }
+b == { "a": 1, "b": None, }
 # True
 ```
 

@@ -2,6 +2,14 @@
 
 Examples
 --------
+- Normalize falsey items from a dictionary to ``None``
+>>> from dict2dict import falsey_to_none
+>>> a = { "a": 1, "b": [], }
+>>> b = falsey_to_none(a)
+>>> b == { "a": 1, "b": None, }
+True
+
+
 - Omit/Remove falsey items from a dictionary
 >>> from dict2dict import omit_falsey
 >>> a = { "a": 1, "b": None, }
@@ -20,6 +28,7 @@ True
 """
 from .clean import omit_falsey
 from .merge import dicts2dict
+from .transform import falsey_to_none
 
 
-__all__ = ["omit_falsey", "dicts2dict"]
+__all__ = ["omit_falsey", "dicts2dict", "falsey_to_none"]
