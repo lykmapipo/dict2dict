@@ -17,7 +17,7 @@ from dict2dict import falsey_to_none
         ({"a": 1, "b": 0.0}, {"a": 1, "b": 0.0}),  # handled
         ({"a": 1, "b": 0j}, {"a": 1, "b": 0j}),  # handled
         ({"a": 1, "b": ""}, {"a": 1, "b": None}),  # handled
-        ({"a": 1, "b": " "}, {"a": 1, "b": None}),  # ignored
+        ({"a": 1, "b": " "}, {"a": 1, "b": None}),  # handled
         ({"a": 1, "b": ()}, {"a": 1, "b": None}),  # handled
         ({"a": 1, "b": (None)}, {"a": 1, "b": None}),  # handled
         ({"a": 1, "b": ("c", None)}, {"a": 1, "b": ("c", None)}),  # ignored

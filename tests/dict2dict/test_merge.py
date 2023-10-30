@@ -7,7 +7,7 @@ from dict2dict import dicts2dict
 
 
 @pytest.mark.parametrize(
-    "sample_dicts",
+    "sources",
     [
         ([None, None], {}),
         ([{}, {}], {}),
@@ -20,9 +20,9 @@ from dict2dict import dicts2dict
         ),
     ],
 )
-def test_dicts2dict(sample_dicts: Tuple[List[Dict[str, Any]], Dict[str, Any]]) -> None:
+def test_dicts2dict(sources: Tuple[List[Dict[str, Any]], Dict[str, Any]]) -> None:
     """Test merging dicts to dict."""
-    raw_dicts, expected_dict = sample_dicts
+    raw_dicts, expected_dict = sources
 
     result_dict = dicts2dict(*raw_dicts)
     assert result_dict is not None
