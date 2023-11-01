@@ -4,7 +4,7 @@ sources = src tests
 .PHONY: install  ## Install the package, dependencies, and pre-commit for local development
 install:
 	python -m pip install -e .[dev]
-	pre-commit install --install-hooks
+	python -m pre_commit install --install-hooks
 
 .PHONY: format  ## Auto-format python source files
 format:
@@ -20,18 +20,14 @@ lint:
 
 .PHONY: codespell  ## Use Codespell to do spellchecking
 codespell:
-	@echo "TODO:"
+	python -m codespell_lib
 
 .PHONY: test  ## Run all tests
 test:
 	python -m pytest --cov-report term --cov-report=xml --cov=$(sources)
 
-.PHONY: testcov  ## Run tests and generate a coverage report
-testcov:
-	@echo "TODO:"
-
 .PHONY: all  ## Run the standard set of checks performed in CI
-all: lint test
+all: lint codespell test
 
 .PHONY: clean  ## Clear local caches and build artifacts
 clean:
