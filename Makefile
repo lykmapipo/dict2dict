@@ -4,7 +4,7 @@ sources = src tests
 .PHONY: install  ## Install the package, dependencies, and pre-commit for local development
 install:
 	python -m pip install -e .[dev]
-	# TODO: pre-commit install --install-hooks
+	pre-commit install --install-hooks
 
 .PHONY: format  ## Auto-format python source files
 format:
