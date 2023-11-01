@@ -22,7 +22,7 @@ lint:
 codespell:
 	python -m codespell_lib
 
-.PHONY: test  ## Run all tests
+.PHONY: test  ## Run all tests and generate a coverage report
 test:
 	python -m pytest --cov-report term --cov-report=xml --cov=$(sources)
 
