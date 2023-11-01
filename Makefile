@@ -48,7 +48,7 @@ clean:
 	rm -rf .tox/
 	rm -f .coverage
 	rm -f .coverage.*
-	rm -rf coverage.xml
+	rm -rf coverage.*
 	rm -rf htmlcov/
 	rm -rf .pytest_cache
 	rm -rf htmlcov
