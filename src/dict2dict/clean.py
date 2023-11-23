@@ -1,8 +1,10 @@
 """Utilities to clean ``dict's``."""
 from typing import Any, Dict
 
+from .transform import falsey_to_none
 
-__all__ = ["omit_falsey"]
+
+__all__ = ["omit_falsey", "dict_to_dict"]
 
 
 def omit_falsey(source: Dict[str, Any]) -> Dict[str, Any]:
@@ -13,12 +15,12 @@ def omit_falsey(source: Dict[str, Any]) -> Dict[str, Any]:
 
     Parameters
     ----------
-    source (dict):
+    source (Dict[str, Any]):
         Valid source dict.
 
     Returns
     -------
-    result (dict):
+    result (Dict[str, Any]):
         New dict with pythonic ``Truey`` values only, else empty dict.
 
     Examples
@@ -38,4 +40,33 @@ def omit_falsey(source: Dict[str, Any]) -> Dict[str, Any]:
                 result[key] = value
 
     # return dict with truey values
+    return result
+
+
+def dict_to_dict(source: Dict[str, Any]) -> Dict[str, Any]:
+    """Normalize and remove ``Falsey`` items from a ``dict``.
+
+    It takes a ``dict``, normalize ``Falsey`` items to ``None``,
+    and then, it remove ``Falsey`` items and retain only ``Truey`` items.
+
+    Parameters
+    ----------
+    source (Dict[str, Any]):
+        Variable ``dict's``.
+
+    Returns
+    -------
+    dict (Dict[str, Any]):
+        Valid dict
+
+    Examples
+    --------
+    >>> from dict2dict import dict_to_dict
+    >>> a = { "a": 1, "b": None, "c": [], }
+    >>> b = dict_to_dict(a)
+    >>> b == { "a": 1, }
+    True
+    """
+    result: Dict[str, Any] = falsey_to_none(source=source)
+    result = omit_falsey(source=result)
     return result

@@ -76,17 +76,17 @@ def falsey_to_none(source: Dict[str, Any], **kwargs: Dict[str, Any]) -> Dict[str
 
     Parameters
     ----------
-    source (dict):
+    source (Dict[str, Any]):
         Valid source dict.
 
     Returns
     -------
-    result (dict):
+    result (Dict[str, Any]):
         New normalized dict, else empty dict.
 
     Examples
     --------
-    >>> from dict2dict import omit_falsey
+    >>> from dict2dict import falsey_to_none
     >>> a = { "a": 1, "b": [], }
     >>> b = falsey_to_none(a)
     >>> b == { "a": 1, "b": None, }
