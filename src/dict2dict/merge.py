@@ -14,12 +14,12 @@ def dicts_to_dict(*sources: Dict[str, Any]) -> Dict[str, Any]:
 
     Parameters
     ----------
-    sources (*dict):
+    sources (*Dict[str, Any]):
         Variable ``dict's``.
 
     Returns
     -------
-    dict (dict):
+    result (Dict[str, Any]):
         Valid dict
 
     Examples

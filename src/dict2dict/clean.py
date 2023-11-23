@@ -56,7 +56,7 @@ def dict_to_dict(source: Dict[str, Any]) -> Dict[str, Any]:
 
     Returns
     -------
-    dict (Dict[str, Any]):
+    result (Dict[str, Any]):
         Valid dict
 
     Examples
