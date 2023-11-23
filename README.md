@@ -27,17 +27,6 @@ c == {"a": 1, "b": 2, "c": None, }
 # True
 ```
 
-- Omit/Remove falsey items from a dictionary
-```python
-from dict2dict import omit_falsey
-
-a = { "a": 1, "b": None, }
-b = omit_falsey(a)
-
-b == { "a": 1, }
-# True
-```
-
 - Normalize falsey items from a dictionary to ``None``
 ```python
 from dict2dict import falsey_to_none
@@ -46,6 +35,17 @@ a = { "a": 1, "b": [], }
 b = falsey_to_none(a)
 
 b == { "a": 1, "b": None, }
+# True
+```
+
+- Remove falsey items from a dictionary
+```python
+from dict2dict import omit_falsey
+
+a = { "a": 1, "b": None, }
+b = omit_falsey(a)
+
+b == { "a": 1, }
 # True
 ```
 

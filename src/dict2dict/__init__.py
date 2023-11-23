@@ -10,7 +10,7 @@ Examples
 True
 
 
-- Omit/Remove falsey items from a dictionary
+- Remove falsey items from a dictionary
 >>> from dict2dict import omit_falsey
 >>> a = { "a": 1, "b": None, }
 >>> b = omit_falsey(a)
