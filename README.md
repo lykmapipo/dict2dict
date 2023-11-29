@@ -6,6 +6,7 @@
 [![license](https://img.shields.io/github/license/lykmapipo/dict2dict)](https://github.com/lykmapipo/dict2dict/blob/main/LICENSE)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+[![pre-commit action](https://github.com/lykmapipo/dict2dict/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/lykmapipo/dict2dict/actions/workflows/pre-commit.yaml)
 
 Opinionated dictionary utilities for Python.
 
