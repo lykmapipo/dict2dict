@@ -22,12 +22,16 @@ lint:
 codespell:
 	python -m codespell_lib
 
+.PHONY: audit  ## Use pip-audit to scan for known vulnerabilities
+audit:
+	python -m pip_audit .
+
 .PHONY: test  ## Run all tests and generate a coverage report
 test:
 	python -m pytest --cov-report term --cov-report=xml --cov=$(sources)
 
 .PHONY: all  ## Run the standard set of checks performed in CI
-all: lint codespell test
+all: lint codespell audit test
 
 .PHONY: clean  ## Clear local caches and build artifacts
 clean:
