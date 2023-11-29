@@ -1,5 +1,10 @@
 # dict2dict
 
+[![pypi](https://img.shields.io/pypi/v/dict2dict)](https://pypi.org/project/dict2dict/)
+[![downloads](https://img.shields.io/pepy/dt/dict2dict)](https://www.pepy.tech/projects/dict2dict)
+[![versions](https://img.shields.io/pypi/pyversions/dict2dict)](https://github.com/lykmapipo/dict2dict)
+[![license](https://img.shields.io/github/license/lykmapipo/dict2dict)](https://github.com/lykmapipo/dict2dict/blob/main/LICENSE)
+
 Opinionated dictionary utilities for Python.
 
 ## Requirements
