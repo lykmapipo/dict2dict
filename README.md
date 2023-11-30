@@ -1,12 +1,17 @@
 # dict2dict
 
+[![ci](https://github.com/lykmapipo/dict2dict/actions/workflows/ci.yaml/badge.svg)](https://github.com/lykmapipo/dict2dict/actions/workflows/ci.yaml)
+[![codecov](https://codecov.io/gh/lykmapipo/dict2dict/graph/badge.svg?token=VUHBA2EZ4K)](https://codecov.io/gh/lykmapipo/dict2dict)
 [![pypi](https://img.shields.io/pypi/v/dict2dict)](https://pypi.org/project/dict2dict/)
 [![downloads](https://img.shields.io/pepy/dt/dict2dict)](https://www.pepy.tech/projects/dict2dict)
 [![versions](https://img.shields.io/pypi/pyversions/dict2dict)](https://github.com/lykmapipo/dict2dict)
 [![license](https://img.shields.io/github/license/lykmapipo/dict2dict)](https://github.com/lykmapipo/dict2dict/blob/main/LICENSE)
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+
 [![pre-commit action](https://github.com/lykmapipo/dict2dict/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/lykmapipo/dict2dict/actions/workflows/pre-commit.yaml)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+[![ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![conventional commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 
 Opinionated dictionary utilities for Python.
 
