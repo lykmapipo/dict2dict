@@ -36,6 +36,10 @@ audit:
 test:
 	python -m pytest --cov-report term --cov-report=xml --cov=$(sources)
 
+.PHONY: pre-commit  ## Run all pre-commit hooks
+pre-commit:
+	python -m pre_commit run --all-files
+
 .PHONY: all  ## Run the standard set of checks performed in CI
 all: lint codespell typecheck audit test
 

@@ -30,6 +30,9 @@ jobs:
     - name: Install dependencies
       run: make install
 
+    - name: Run pre-commit checks
+      run: make pre-commit
+
     - name: Run tests
       run: make test
 
