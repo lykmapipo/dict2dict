@@ -5,6 +5,7 @@ sources = src tests
 install:
 	python -m pip install -e .[dev]
 	python -m pre_commit install --install-hooks
+	python -m pre_commit install --hook-type commit-msg
 
 .PHONY: format  ## Auto-format python source files
 format:
@@ -22,6 +23,10 @@ lint:
 codespell:
 	python -m codespell_lib
 
+.PHONY: typecheck  ## Perform type-checking
+typecheck:
+	python -m mypy
+
 .PHONY: audit  ## Use pip-audit to scan for known vulnerabilities
 audit:
 	python -m pip_audit .
@@ -31,7 +36,7 @@ test:
 	python -m pytest --cov-report term --cov-report=xml --cov=$(sources)
 
 .PHONY: all  ## Run the standard set of checks performed in CI
-all: lint codespell audit test
+all: lint codespell typecheck audit test
 
 .PHONY: clean  ## Clear local caches and build artifacts
 clean:

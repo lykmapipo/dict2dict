@@ -5,7 +5,7 @@ from typing import Any, Dict, Type
 __all__ = ["falsey_to_none"]
 
 
-def _is_falsey(value: Type[Any]) -> Type[bool]:
+def _is_falsey(value: Type[Any]) -> bool:
     """Apply custom rule to check if value should not be considered as ``Falsey``.
 
     This implementation ignore:
