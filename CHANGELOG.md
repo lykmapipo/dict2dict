@@ -1,3 +1,14 @@
+## v0.4.0 (2023-12-12)
+
+### Feat
+
+- normalize and remove falsey items from a dict
+
+### Fix
+
+- **config**: drop python 3.13 from ci python matrix
+- **config**: improve ci github action os and python matrix
+
 ## v0.3.0 (2023-10-30)
 
 ### Feat
