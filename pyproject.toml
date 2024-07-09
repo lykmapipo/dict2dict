@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 # Project metadata.
 [project]
 name = "dict2dict"
-version = "0.4.0"
+version = "0.4.1"
 description = "Opinionated dictionary utilities for Python."
 readme = "README.md"
 requires-python = ">=3.8"
@@ -171,7 +171,7 @@ exclude_lines = [
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-version = "0.4.0"
+version = "0.4.1"
 version_provider = "commitizen"
 version_scheme = "semver"
 major_version_zero = true
