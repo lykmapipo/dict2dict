@@ -11,12 +11,12 @@ install:
 .PHONY: format  ## Auto-format python source files
 format:
 	python -m black $(sources)
-	python -m ruff --fix $(sources)
+	python -m ruff check --fix $(sources)
 	python -m ruff format $(sources)
 
 .PHONY: lint  ## Lint python source files
 lint:
-	python -m ruff $(sources)
+	python -m ruff check $(sources)
 	python -m ruff format --check $(sources)
 	python -m black $(sources) --check --diff
 

@@ -1,4 +1,5 @@
 """Utilities to transform ``dict's``."""
+
 from typing import Any, Dict, Type
 
 
@@ -87,9 +88,9 @@ def falsey_to_none(source: Dict[str, Any], **kwargs: Dict[str, Any]) -> Dict[str
     Examples
     --------
     >>> from dict2dict import falsey_to_none
-    >>> a = { "a": 1, "b": [], }
+    >>> a = {"a": 1, "b": []}
     >>> b = falsey_to_none(a)
-    >>> b == { "a": 1, "b": None, }
+    >>> b == {"a": 1, "b": None}
     True
     """
     result: Dict[str, Any] = {}  # normalized dict

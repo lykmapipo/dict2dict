@@ -1,4 +1,5 @@
 """Utilities to merge multiple ``dict's`` into single ``dict``."""
+
 from typing import Any, Dict
 
 
@@ -25,10 +26,10 @@ def dicts_to_dict(*sources: Dict[str, Any]) -> Dict[str, Any]:
     Examples
     --------
     >>> from dict2dict import dicts_to_dict
-    >>> a = { "a": 1, "b": None, "c": None, }
-    >>> b = { "b": 2, "c": None, }
+    >>> a = {"a": 1, "b": None, "c": None}
+    >>> b = {"b": 2, "c": None}
     >>> c = dicts_to_dict(a, b)
-    >>> c == { "a": 1, "b": 2, "c": None, }
+    >>> c == {"a": 1, "b": 2, "c": None}
     True
     """
     falsey: Dict[str, Any] = {}  # falsey values

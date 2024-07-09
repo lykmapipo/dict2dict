@@ -1,4 +1,5 @@
 """Tests for merging multiple ``dict`` into single ``dict``."""
+
 from typing import Any, Dict, List, Tuple
 
 import pytest

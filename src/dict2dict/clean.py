@@ -1,4 +1,5 @@
 """Utilities to clean ``dict's``."""
+
 from typing import Any, Dict
 
 from .transform import falsey_to_none
@@ -26,9 +27,9 @@ def omit_falsey(source: Dict[str, Any]) -> Dict[str, Any]:
     Examples
     --------
     >>> from dict2dict import omit_falsey
-    >>> a = { "a": 1, "b": None, }
+    >>> a = {"a": 1, "b": None}
     >>> b = omit_falsey(a)
-    >>> b == { "a": 1, }
+    >>> b == {"a": 1}
     True
     """
     result: Dict[str, Any] = {}  # clean dict
@@ -62,9 +63,9 @@ def dict_to_dict(source: Dict[str, Any]) -> Dict[str, Any]:
     Examples
     --------
     >>> from dict2dict import dict_to_dict
-    >>> a = { "a": 1, "b": None, "c": [], }
+    >>> a = {"a": 1, "b": None, "c": []}
     >>> b = dict_to_dict(a)
-    >>> b == { "a": 1, }
+    >>> b == {"a": 1}
     True
     """
     result: Dict[str, Any] = falsey_to_none(source=source)
