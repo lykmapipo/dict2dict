@@ -1,5 +1,9 @@
 ## v0.4.1 (2024-07-10)
 
+### Chore
+
+- upgrade and use latest dependencies versions
+
 ## v0.4.0 (2023-12-12)
 
 ### Feat
