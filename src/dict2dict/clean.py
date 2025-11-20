@@ -5,7 +5,7 @@ from typing import Any, Dict
 from .transform import falsey_to_none
 
 
-__all__ = ["omit_falsey", "dict_to_dict"]
+__all__ = ["dict_to_dict", "omit_falsey"]
 
 
 def omit_falsey(source: Dict[str, Any]) -> Dict[str, Any]:
